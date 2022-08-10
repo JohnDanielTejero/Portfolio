@@ -8,7 +8,17 @@
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0/dist/js/bootstrap.bundle.min.js" integrity="sha384-A3rJD856KowSb7dwlZdYEkO39Gagi7vIsF0jrRAoQmDKKtQBHUuLZ9AsSv4jD4Xa" crossorigin="anonymous"></script>
     <link type = "text/css" rel = "stylesheet" href="/CSS/nav.css"/>
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.8.3/font/bootstrap-icons.css">
-    <link type = "text/css" rel = "stylesheet" href="/CSS/footersocials.css"/>
+   <link type = "text/css" rel = "stylesheet" href="CSS/nav.css"/>
+    <script
+        src="https://code.jquery.com/jquery-3.3.1.js"
+        integrity="sha256-2Kok7MbOyxpgUVvAk/HJ2jigOSYS2auK4Pfzbm7uH60="
+        crossorigin="anonymous">
+    </script>
+    <script> 
+    $(function(){
+      $("#navigation-header").load("header.html"); 
+    });
+</script> 
     <title>John Daniel Tejero</title>
     <style>
         @import url('https://fonts.googleapis.com/css2?family=Alumni+Sans+Inline+One&family=Poppins:ital,wght@0,200;0,400;1,100;1,200;1,300&display=swap');
@@ -86,31 +96,6 @@
 </head>
 <body>
     <header class = "fixed-top" style = "width:100%;"  id = "navigation-header">
-        <nav class = "nav-wrapper header-color">
-            <div class = "nav-brand-wrapper h-100">
-                <a class ="nav-brand-clickable" href ="#">
-                    Portfolio
-                </a>
-            </div>
-            <input type = "checkbox" id = "nav-button-toggle"/>
-            <label for = "nav-button-toggle" class = "nav-toggler">
-                <span class = "nav-burger-menu"></span>
-            </label>
-            <div class = "nav-main">
-                    <ul class = "nav-items-wrapper">
-                        <li class = "nav-item-list">
-                            <a href = "#" class  = "nav-item-links">About</a>
-                        </li>
-                        <li class = "nav-item-list">
-                            <a href = "#" class = "nav-item-links">Contact</a>
-                        </li>
-                        <li class = "nav-item-list">
-                            <a href = "#" class  = "nav-item-links">Projects</a>
-                        </li>
-                    </ul>     
-            </div>       
-        </nav>
-        <script defer src = "/js/nav.js"></script>
     </header>
     <main style="margin-top: 6rem;">
         <section class = "hero-banner p-5">
