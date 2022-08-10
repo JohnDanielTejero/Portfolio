@@ -1,0 +1,37 @@
+
+.socials{
+    position: relative;
+    display: inline-block;
+    z-index: 1;
+    width: fit-content;
+}
+.socials::before{
+    content:"";
+    border-radius: 0.55rem !important;
+    position: absolute;
+    z-index: -1;
+    background-image: linear-gradient(
+        rgb(var(--headerColorComplementary)),
+        rgb(var(--headerColorPrimary))
+    );
+    width: 0%;
+    height: 100%;   
+    left: 50%;
+    top:50%;
+    opacity: 0;
+    transform: translate(-50%, -50%);
+}
+
+.socials, .socials::before{
+    transition: all 500ms ease-in-out;
+}
+
+.socials:hover{
+    color:white !important;    
+}
+
+.socials:hover::before{
+    opacity: 1;
+    width: 100%;  
+}
+
