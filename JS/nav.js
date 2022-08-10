@@ -3,7 +3,7 @@ navButtons();
 navPadding();
 popUps();
 
-let toggler = document.querySelector("#nav-button-toggle");
+var toggler = document.querySelector("#nav-button-toggle");
 
 let body = document.querySelector("body");
 
