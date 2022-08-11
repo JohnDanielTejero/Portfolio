@@ -16,6 +16,7 @@
         $(function(){
         $("#navigation-header").load("header.html"); 
         });
+
     </script> 
     <title>John Daniel Tejero</title>
     <style>
@@ -86,6 +87,23 @@
             text-shadow: 0.2rem 0.2rem 0.23rem rgb(var(--headerColorComplementary));
         }
 
+        .project-stretch{
+            position: absolute;
+            width: 100%;
+            height: 100%;
+            border: none;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            background-color: rgba(0, 0, 0, 0);
+            transition: all 500ms ease-in-out;
+        }
+
+        .project-stretch:hover{
+            background-color: rgba(0, 0, 0, 0.718);
+            transition: all 500ms ease-in-out;
+        }
+
     </style>
 </head>
 <body>
@@ -93,9 +111,134 @@
 
     </header>
     <main style="margin-top: 6rem;">
-        <section>
-            
+        <section class ="p-5">
+            <h3 class = "text-center display-6 fw-bold tagline text-dark mb-5">
+                My Academic Projects
+            </h3>
+            <div class ="row g-3 gy-3">
+                <div class ="col-12 col-sm-6 col-md-3" style = "height: 30rem;">
+                    <div class ="card p-2 h-100">
+                        <img class ="card-img-top" src = "resources/Demo Project/Module 1 image.PNG"/>
+                        <div class ="card-body">
+                            <h3>
+                                Lithan Educlaas Front End Development Project 
+                            </h3>
+                            <button class ="project-stretch" data-project-value = "1" data-bs-toggle = "modal" data-bs-target="#projectModal"></button>
+                        </div>
+                    </div>
+                </div>
+                <div class ="col-12 col-sm-6 col-md-3" style = "height: 30rem;">
+                    <div class ="card p-2 h-100">
+                        <img class ="card-img-top" src = "resources/Demo Project/module 3.PNG"/>
+                        <div class ="card-body">
+                            <h3>
+                                Lithan Educlaas UI Designing Project
+                            </h3>
+                            <button class ="project-stretch" data-project-value = "2" data-bs-toggle = "modal" data-bs-target="#projectModal"></button>
+                        </div>
+                    </div>
+                </div>
+                <div class ="col-12 col-sm-6 col-md-3" style = "height: 30rem;">
+                    <div class ="card p-2 h-100">
+                        <img class ="card-img-top" src = "resources/Demo Project/module  6- 7.PNG"/>
+                        <div class ="card-body">
+                            <h3>
+                                Lithan Educlaas Web Development Foundation and Capstone Project
+                            </h3>
+                            <button class ="project-stretch" data-project-value = "3" data-bs-toggle = "modal" data-bs-target="#projectModal"></button>
+                        </div>
+                    </div>
+                </div>
+                <div class ="col-12 col-sm-6 col-md-3" style = "height: 30rem;">
+                    <div class ="card p-2 h-100">
+                        <img class ="card-img-top" src = "resources/Demo Project/Module 8 image.PNG"/>
+                        <div class ="card-body">
+                            <h3>
+                                Lithan Educlaas Application Development and Processes Project 
+                            </h3>
+                            <button class ="project-stretch" data-project-value = "4" data-bs-toggle = "modal" data-bs-target="#projectModal"></button>
+                        </div>
+                    </div>
+                </div>
+            </div>
         </section>
+        <!-- Modal -->
+        <div class="modal fade" id="projectModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+            <div class="modal-dialog modal-fullscreen">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <div class="modal-body">
+                    <div class ="row">
+                        <div class ="col-12 col-md-6" id = "videos">
+                            <!--video here-->
+                        </div>
+                        <div class = "col-12 col-md-6">
+                            <h5 class="display-5 fw-bold" id="modalTitle">
+
+                            </h5>
+                            <!--Description-->
+                            <div id = "description">
+
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            </div>
+        </div>
     </main>
+    <script>
+        const modalTitle = document.querySelector("#modalTitle");
+        const videos  = document.querySelector("#videos");
+        const description = document.querySelector("#description");
+
+        const projects = [
+            {
+                "id" : 1,
+                "name" : "Lithan Educlaas Front End Development Project",
+                "iframe" : `<iframe src="https://drive.google.com/file/d/1NrlXQ3aSakBXyNk2YbtZmLUigfA3m9HB/preview" height="480" allow="autoplay" class ="w-100"></iframe>`,
+                "description" : "Developed a portal to display information about course being offered and manage registration leads for ABC Learning Center."
+            }, 
+            {
+                "id" : 2,
+                "name" : "Lithan Educlaas UI Designing Project",
+                "iframe" :`<iframe src="https://drive.google.com/file/d/1f9-ZQChzEsh51YQJNBWvLTtt2-1Ky4T6/preview" height="480" allow="autoplay" class ="w-100"></iframe><iframe src="https://drive.google.com/file/d/1fU5z8gzXnUM-HeUnasd4SpimOO9SN6cA/preview" height="480" class ="w-100" allow="autoplay"></iframe>`,
+                "description" : "Designed a prototype for the community portal proposed by ABC Jobs Pte. Ltd. that aims to open more opportunities to Software Programmers and the like and tested its usability."
+            },
+            {
+                "id" : 3,
+                "name" : "Lithan Educlaas Web Development Foundation and Capstone Project",
+                "iframe" : ``,
+                "description": "Implemented and developed the community portal by ABC Jobs Pte Ltd using Spring technology, Implemented and developed additional features to the community portal, tested the community portal, and managed problems on maintenance stage."
+            },
+            {
+                "id" : 4,
+                "name" : "Lithan Educlaas Application Development and Processes Project",
+                "iframe" : ``,
+                "description" : "Developed a car sales portal proposed by XYZ Cars Pte Ltd using Spring boot with Spiral model as the SDLC Model."
+            }
+        ];
+
+        const viewProject = document.querySelectorAll(".project-stretch");
+        viewProject.forEach((e)=>{
+            e.addEventListener("click", function(){
+                const object = projects.find(project => project.id == e.getAttribute("data-project-value"));
+                modalTitle.innerHTML = object.name;
+                description.innerHTML = object.description;
+                let videocontainer = document.createElement("div");
+                videocontainer.innerHTML = object.iframe;
+
+                if (videos.children.length != 0){
+                    console.log(videos.children)
+                    while (videos.firstChild){
+                        videos.removeChild(videos.firstChild);
+                    }
+                }
+                videos.appendChild(videocontainer);
+            });
+        })
+    </script>
 </body>
 </html>
