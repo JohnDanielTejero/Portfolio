@@ -38,7 +38,18 @@
             height: 0.3rem;
             background-color: aliceblue;
             border-radius: 25rem;
+            animation: animate 2s linear infinite;
             
+        }
+        
+        @keyframes animate{
+            0%{
+                filter : hue-rotate(0deg);
+            }
+            
+            100%{
+                filter : hue-rotate(720deg);
+            }
         }
 
         .hero-banner{
